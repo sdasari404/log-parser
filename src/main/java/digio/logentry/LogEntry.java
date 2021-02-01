@@ -1,41 +1,43 @@
 package digio.logentry;
 
-import java.util.Date;
+import java.util.Objects;
 
 public class LogEntry {
 
     private String ipAddr;
-    private Date timestamp;
     private String url;
-    private int response;
-    private String headers;
 
-    public LogEntry(String ipAddr, Date timestamp, String url, int response, String headers) {
+    public LogEntry(final String ipAddr, final String url) {
         this.ipAddr = ipAddr;
-        this.timestamp = timestamp;
         this.url = url;
-        this.response = response;
-        this.headers = headers;
     }
 
     public String getIpAddr() {
         return ipAddr;
     }
 
-    public Date getTimestamp() {
-        return timestamp;
-    }
-
     public String getUrl() {
         return url;
     }
 
-    public int getResponse() {
-        return response;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LogEntry logEntry = (LogEntry) o;
+        return Objects.equals(ipAddr, logEntry.ipAddr) && Objects.equals(url, logEntry.url);
     }
 
-    public String getHeaders() {
-        return headers;
+    @Override
+    public int hashCode() {
+        return Objects.hash(ipAddr, url);
     }
 
+    @Override
+    public String toString() {
+        return "LogEntry{" +
+                "ipAddr='" + ipAddr + '\'' +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

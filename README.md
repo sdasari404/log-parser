@@ -1,7 +1,7 @@
 ### Log Parser
 
 - [Problem](PROBLEM.md)
-- [Example log data](example.log)
+- [Example log data](src/main/resources/example.log)
 
 
 #### Setup and running the application

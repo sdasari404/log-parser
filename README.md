@@ -10,6 +10,9 @@
 `mvn clean install`
 - Run the application using `mvn clean package`
 
+#### Running unit tests
+
+- `mvn clean test`
 
 #### Assumptions
 - Assuming the apache http log format to be consistent, each log line has only one instance of IP address and one url

@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class LogEntry {
 
-    private String ipAddr;
-    private String url;
+    private final String ipAddr;
+    private final String url;
 
     public LogEntry(final String ipAddr, final String url) {
         this.ipAddr = ipAddr;

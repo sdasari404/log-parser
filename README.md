@@ -12,5 +12,6 @@
 
 
 #### Assumptions
+- Assuming the apache http log format to be consistent, each log line has only one instance of IP address and one url
 - The log file being parsed does not have any headers
-
+- Ignoring edge cases caused by multiple IP addresses or urls having the same frequency

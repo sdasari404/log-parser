@@ -18,7 +18,7 @@ class ParserTest {
     @Test
     public void testFileParser() throws FileNotFoundException {
 
-        List<LogEntry> testEntries = Arrays.asList(
+        List<LogEntry> expectedEntries = Arrays.asList(
                 new LogEntry("177.71.128.21", "/intranet-analytics/"),
                 new LogEntry("168.41.191.40", "http://example.net/faq/"),
                 new LogEntry("168.41.191.41", "/this/page/does/not/exist/")
@@ -26,7 +26,7 @@ class ParserTest {
 
         List<LogEntry> logEntries = new Parser().parse(new File("src/test/resources/test-1.log"));
 
-        assertTrue(CollectionUtils.isEqualCollection(testEntries, logEntries));
+        assertTrue(CollectionUtils.isEqualCollection(expectedEntries, logEntries));
     }
 
     @Test

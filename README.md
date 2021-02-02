@@ -8,7 +8,8 @@
 
 - The easiest way to get started is to install via maven
 `mvn clean install`
-- Run the application using `mvn clean package`
+- Package the project `mvn clean package`
+- Run the project `mvn exec:java -Dexec.mainClass=digio.main.LogParserDriver`
 
 #### Running unit tests
 
